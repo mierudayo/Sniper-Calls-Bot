@@ -38,6 +38,9 @@ import src.constants as constants
 import src.community.tentacles_packages as community_tentacles_packages
 import src.configuration_manager as configuration_manager
 
+from getpass import getpass
+api_key_crypted = configuration.encrypt(getpass("ENTER YOUR API-KEY: ")).decode()
+
 COMMANDS_LOGGER_NAME = "Commands"
 IGNORED_COMMAND_WHEN_RESTART = ["-u", "--update"]
 
